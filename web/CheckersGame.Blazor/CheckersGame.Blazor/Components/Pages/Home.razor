@@ -1,0 +1,20 @@
+﻿@page "/"
+
+@rendermode InteractiveServer
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app. TESTE DE HOTRELOAD
+
+<RadzenButton Click="@ButtonClicked" Text="@message"></RadzenButton>
+
+@code {
+    string message = string.Empty;
+
+    void ButtonClicked()
+    {
+        message = "Button already clicked";
+    }
+}

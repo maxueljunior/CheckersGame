@@ -1,0 +1,47 @@
+﻿@using CheckersGame.Blazor.Components.Layout
+
+@page "/Login"
+@rendermode InteractiveServer
+@layout LoginLayout
+
+<RadzenStack AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Center" Style="height: 100%">
+
+    <RadzenRow>
+        <RadzenColumn Size="10">
+            <RadzenCard>
+
+                <RadzenRow>
+
+                    <RadzenColumn Size="12">
+
+                        <RadzenFormField Text="Usuário">
+                            <RadzenTextBox />
+                        </RadzenFormField>
+
+                    </RadzenColumn>
+
+                    <RadzenColumn Size="12">
+
+                        <RadzenFormField Text="Senha">
+                            <RadzenPassword />
+                        </RadzenFormField>
+
+                    </RadzenColumn>
+
+                    <RadzenColumn Size="12">
+
+                        <RadzenLink Text="Esqueceu sua senha?"/>
+
+                    </RadzenColumn>
+
+                </RadzenRow>
+
+            </RadzenCard>
+        </RadzenColumn>
+    </RadzenRow>
+
+</RadzenStack>
+
+@code {
+
+}
