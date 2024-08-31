@@ -5,3 +5,12 @@ html, body {
     margin: 0;
     padding: 0;
 }
+
+:root {
+    --preto-logo-color: #1A1A1A;
+    --marrom-logo-color: #590000;
+    --amarelo-logo-color: #FFC967;
+    --rz-primary: var(--preto-logo-color) !important;
+    --rz-secondary: var(--marrom-logo-color) !important;
+    --rz-base: var(--amarelo-logo-color) !important;
+}

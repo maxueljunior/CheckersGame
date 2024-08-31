@@ -1,0 +1,41 @@
+﻿.container-login{
+    height: 100%;
+}
+
+::deep .stack-principal {
+    height: 100% !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--marrom-logo-color)), to(var(--preto-logo-color))) !important;
+    background: -o-linear-gradient(var(--marrom-logo-color), var(--preto-logo-color)) !important;
+    background: linear-gradient(var(--marrom-logo-color), var(--preto-logo-color)) !important;
+}
+
+.card-login, ::deep .card-login {
+    max-width: 43.75rem;
+    min-width: 18rem;
+    width: 100%;
+    background-color: rgba(255, 201, 103, 0.1);
+}
+
+.card-logo, ::deep .card-logo {
+    width: 15rem;
+}
+
+.card-input-login, ::deep .card-input-login {
+    width: 100%;
+}
+
+.card-link, ::deep .card-link {
+    font-size: 0.875rem;
+    width: 100%;
+    color: #fff;
+    text-decoration: none;
+}
+
+::deep .rz-link-text{
+    text-decoration: none !important;
+}
+
+.card-button-login, ::deep .card-button-login {
+    background-color: var(--preto-logo-color);
+    color: #fff;
+}

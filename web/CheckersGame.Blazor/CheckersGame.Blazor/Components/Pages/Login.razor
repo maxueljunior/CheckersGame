@@ -4,43 +4,70 @@
 @rendermode InteractiveServer
 @layout LoginLayout
 
-<RadzenStack AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Center" Style="height: 100%">
+<div class="container-login">
+    <RadzenStack class="rz-py-4 rz-px-4 stack-principal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Center" Wrap="FlexWrap.NoWrap">
 
-    <RadzenRow>
-        <RadzenColumn Size="10">
-            <RadzenCard>
+        <div class="card-login">
+            <RadzenCard class="card-login">
 
-                <RadzenRow>
+                <RadzenRow AlignItems="AlignItems.Center" JustifyContent="JustifyContent.Center" RowGap="0.1rem">
 
-                    <RadzenColumn Size="12">
+                    <RadzenColumn Size="12" SizeXS="6" class="rz-display-flex rz-justify-content-center rz-align-items-center">
 
-                        <RadzenFormField Text="Usuário">
-                            <RadzenTextBox />
-                        </RadzenFormField>
-
-                    </RadzenColumn>
-
-                    <RadzenColumn Size="12">
-
-                        <RadzenFormField Text="Senha">
-                            <RadzenPassword />
-                        </RadzenFormField>
+                        <div class="card-logo">
+                            <RadzenImage Path="images/checkers-logo-sem-fundo.png" class="card-logo" AlternateText="checkers logo"  />
+                        </div>
 
                     </RadzenColumn>
 
-                    <RadzenColumn Size="12">
+                    <RadzenColumn Size="12" SizeXS="6">
 
-                        <RadzenLink Text="Esqueceu sua senha?"/>
+                            <RadzenStack JustifyContent="JustifyContent.Center" AlignItems="AlignItems.Center" Orientation="Orientation.Vertical">
+
+                                <div class="card-input-login">
+                                    <RadzenFormField Text="Usuário" class="card-input-login" Variant="Variant.Flat">
+                                        <ChildContent>
+                                            <RadzenTextBox />
+                                        </ChildContent>
+                                        <End>
+                                            <RadzenIcon Icon="person"/>
+                                        </End>
+                                    </RadzenFormField>
+                                </div>
+
+                                <div class="card-input-login">
+                                    <RadzenFormField Text="Senha" class="card-input-login" Variant="Variant.Flat">
+                                        <ChildContent>
+                                            <RadzenPassword />
+                                        </ChildContent>
+                                        <End>
+                                            <RadzenIcon Icon="key" />
+                                        </End>
+                                    </RadzenFormField>
+                                </div>
+
+                                <div class="card-link">
+                                    <RadzenLink Text="Esqueceu sua senha?" class="card-link" />
+                                </div>
+
+                            </RadzenStack>
+
+                            <RadzenStack JustifyContent="JustifyContent.End" AlignItems="AlignItems.End" Orientation="Orientation.Horizontal" class="rz-mt-4">
+
+                                <div class="card-button-login">
+                                    <RadzenButton Text="Entrar" class="card-button-login" Icon="login" />
+                                </div>
+
+                            </RadzenStack>
 
                     </RadzenColumn>
-
                 </RadzenRow>
 
             </RadzenCard>
-        </RadzenColumn>
-    </RadzenRow>
+        </div>
 
-</RadzenStack>
+    </RadzenStack>
+</div>
 
 @code {
 
