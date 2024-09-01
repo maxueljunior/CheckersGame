@@ -1,5 +1,6 @@
 using CheckersGame.Blazor.Client.Pages;
 using CheckersGame.Blazor.Components;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Radzen;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -29,6 +30,9 @@ app.UseHttpsRedirection();
 
 app.UseStaticFiles();
 app.UseAntiforgery();
+
+//app.UseAuthentication();
+//app.UseAuthorization();
 
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode()

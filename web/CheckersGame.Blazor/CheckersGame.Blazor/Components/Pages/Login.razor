@@ -25,23 +25,23 @@
                             <RadzenStack JustifyContent="JustifyContent.Center" AlignItems="AlignItems.Center" Orientation="Orientation.Vertical">
 
                                 <div class="card-input-login">
-                                    <RadzenFormField Text="Usuário" class="card-input-login" Variant="Variant.Flat">
+                                    <RadzenFormField Text="Usuário" class="card-input-login" Variant="Variant.Outlined">
                                         <ChildContent>
                                             <RadzenTextBox />
                                         </ChildContent>
                                         <End>
-                                            <RadzenIcon Icon="person"/>
+                                        <RadzenIcon Icon="person" IconColor="#fff" />
                                         </End>
                                     </RadzenFormField>
                                 </div>
 
                                 <div class="card-input-login">
-                                    <RadzenFormField Text="Senha" class="card-input-login" Variant="Variant.Flat">
+                                    <RadzenFormField Text="Senha" class="card-input-login" Variant="Variant.Outlined">
                                         <ChildContent>
                                             <RadzenPassword />
                                         </ChildContent>
                                         <End>
-                                            <RadzenIcon Icon="key" />
+                                        <RadzenIcon Icon="key" IconColor="#fff" />
                                         </End>
                                     </RadzenFormField>
                                 </div>
@@ -55,7 +55,7 @@
                             <RadzenStack JustifyContent="JustifyContent.End" AlignItems="AlignItems.End" Orientation="Orientation.Horizontal" class="rz-mt-4">
 
                                 <div class="card-button-login">
-                                    <RadzenButton Text="Entrar" class="card-button-login" Icon="login" />
+                                    <RadzenButton Text="Entrar" class="card-button-login" Icon="login" IconStyle="IconStyle.Primary" />
                                 </div>
 
                             </RadzenStack>
@@ -70,5 +70,4 @@
 </div>
 
 @code {
-
 }
