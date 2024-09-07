@@ -1,5 +1,7 @@
 ﻿@inherits LayoutComponentBase
 
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
 <RadzenLayout Style="grid-template-areas: 'rz-sidebar rz-header' 'rz-sidebar rz-body'">
     <RadzenHeader>
 
@@ -83,6 +85,16 @@
 
         <div class="rz-p-4">
 
+            <RadzenButton Click="SignIn">Sign In</RadzenButton>
+
+            <AuthorizeView>
+                <Authorized>
+                    <p>Hello, @context.User.Identity?.Name!</p>
+                </Authorized>
+                <NotAuthorized>
+                    <p>You're not authorized.</p>
+                </NotAuthorized>
+            </AuthorizeView>
             @Body
 
         </div>
@@ -100,4 +112,12 @@
 
 @code {
     bool sidebarExpanded = true;
+
+    public string userIdentifier = "Maxuel";
+
+    private void SignIn()
+    {
+        ((CustomAuthStateProvider)AuthenticationStateProvider)
+            .AuthenticateUser(userIdentifier);
+    }
 }
